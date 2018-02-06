@@ -10,7 +10,12 @@
             <navigate></navigate>
           </Col>
           <Col span="20">
-            <div class="wrapper-content ivu-article"></div>
+            <div class="wrapper-content ivu-article">
+              <div class="breadcrumb">
+                <breadcrumb-nav :currentPath="currentPath"></breadcrumb-nav>
+              </div>
+              <div class="wrapper-content-info">dd</div>
+            </div>
           </Col>
         </Row>
       </div>
@@ -26,6 +31,20 @@ export default {
     navMenu,
     navigate,
     breadcrumbNav
+  },
+  data () {
+    return {
+      currentPath: [{
+        title: '首页',
+        path: '/',
+        name: 'home'
+      },
+      {
+        title: '文章管理',
+        path: '',
+        name: 'manage'
+      }]
+    };
   }
 };
 </script>

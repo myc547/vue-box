@@ -1,6 +1,6 @@
 <template>
   <div class="navigate">
-    <Menu width="auto" active-name="1-2" :open-names="['1']">
+    <Menu width="auto" active-name="1-1" :open-names="['1']">
       <Submenu name="1">
         <template slot="title">
           <Icon type="ios-paper"></Icon>
