@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped="scoped">
-  @import "./assets/style/common.css";
+  @import "./assets/css/common.css";
   .icon-loading{
     position: fixed;
     top: 10px;

@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <div class="wrapper-header">
-        <nav-menu></nav-menu>
+        <nav-menu :menu-list="menuList" @on-change="handleChange"></nav-menu>
       </div>
       <div class="wrapper-container">
         <Row>
@@ -45,10 +45,23 @@ export default {
         name: 'manage'
       }]
     };
+  },
+  computed: {
+    menuList () {
+      return this.$store.state.app.menuList;
+    }
+  },
+  methods: {
+    handleChange (name) {
+      this.$router.push({
+        name: name
+      });
+      this.$emit('on-change', name);
+    }
   }
 };
 </script>
 
 <style lang="less">
-  @import "../assets/style/less/article.less";
+  @import "../assets/css/less/article.less";
 </style>

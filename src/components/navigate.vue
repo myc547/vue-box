@@ -46,5 +46,5 @@
 
 </script>
 <style scoped="scoped" lang="less">
-  @import "../assets/style/less/navigate.less";
+  @import "../assets/css/less/navigate.less";
 </style>
